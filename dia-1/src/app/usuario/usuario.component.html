@@ -1,7 +1,8 @@
 <div>
     <button (click)="alSeleccionarUsuario()">
         <!-- Vinculación de propiedades-->
-        <img [src]="'../../../public/usuarios' + usuarioSeleccionado.avatar" [alt]="usuarioSeleccionado.nombre">
+        <img [src]="'/usuarios/' + usuarioSeleccionado.avatar" [alt]="usuarioSeleccionado.nombre">
+
         <!--Inerpolación de cadenas-->
         <span>{{usuarioSeleccionado.nombre}}</span>
     </button>

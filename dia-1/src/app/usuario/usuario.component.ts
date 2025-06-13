@@ -15,7 +15,7 @@ export class UsuarioComponent {
   usuarioSeleccionado = USUARIOS_FALSOS[indiceAleatorio]
 
   get rutaImagen () {
-    return '../../../public/usuarios' + this.usuarioSeleccionado.avatar
+    return 'public/usuarios' + this.usuarioSeleccionado.avatar
   }
 
   alSeleccionarUsuario () {
