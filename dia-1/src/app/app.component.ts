@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { EncabezadoComponent } from "./encabezado/encabezado.component";
 import { UsuarioComponent } from "./usuario/usuario.component";
+import { USUARIOS_FALSOS } from './usuario/usuarios-falsos';
+
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,5 @@ import { UsuarioComponent } from "./usuario/usuario.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'dia_1';
+  usuarios = USUARIOS_FALSOS;
 }

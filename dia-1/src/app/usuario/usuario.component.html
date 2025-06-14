@@ -1,10 +1,10 @@
-<div>
+<div class="contenedor-botones">
     <button (click)="alSeleccionarUsuario()">
         <!-- Vinculación de propiedades-->
-        <img [src]="'/usuarios/' + usuarioSeleccionado.avatar" [alt]="usuarioSeleccionado.nombre">
+        <img [src]="rutaImagen" [alt]="nombre">
 
         <!--Inerpolación de cadenas-->
-        <span>{{usuarioSeleccionado.nombre}}</span>
+        <span>{{nombre}}</span>
     </button>
 </div>
 
