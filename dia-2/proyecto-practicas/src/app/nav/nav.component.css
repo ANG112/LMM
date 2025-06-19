@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem;
+    width: auto;
+    gap: 1rem;
+}
+
+.navitem {
+    color: bisque;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.navitem:hover {
+    color: aqua;
+}

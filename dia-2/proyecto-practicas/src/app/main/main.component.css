@@ -1,0 +1,16 @@
+.titulo-seccion {
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenedor-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+

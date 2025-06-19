@@ -1,0 +1,30 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 12px;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    color: beige;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+p {
+    color: whitesmoke;
+}
+
+#idFavicon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: whitesmoke;
+}
