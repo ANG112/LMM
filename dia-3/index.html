@@ -99,11 +99,64 @@
 
 <section>
     <div class="flex flex-wrap gap-5 m-5">
-        <div class="inline-block w-40 h-40 border border-amber-300 bg-amber-500 text-white font-extrabold align-middle">Uno</div>
-        <div class="inline-block w-40 h-40 border border-amber-300 bg-amber-500 text-white font-extrabold align-middle">Dos</div>
-        <div class="inline-block w-40 h-40 border border-amber-300 bg-amber-500 text-white font-extrabold align-middle">Tres</div>
-        <div class="inline-block w-40 h-40 border border-amber-300 bg-amber-500 text-white font-extrabold align-middle ">Cuatro</div>
+        <div class="flex w-40 h-40 justify-center items-center border border-amber-300 bg-amber-500 text-white font-extrabold text-center shadow-sm">Uno</div>
+        <div class="flex w-40 h-40 justify-center items-center border border-amber-300 bg-amber-500 text-white font-extrabold text-center shadow-sm">Dos</div>
+        <div class="flex w-40 h-40 justify-center items-center border border-amber-300 bg-amber-500 text-white font-extrabold text-center shadow-sm">Tres</div>
+        <div class="flex w-40 h-40 justify-center items-center border border-amber-300 bg-amber-500 text-white font-extrabold text-center shadow-sm ">Cuatro</div>
     </div>
+</section>
+
+<hr class="mb-20">
+<section>
+    <h2 class="text-2xl font-extrabold m-2">DISPLAY</h2>
+    <h3 class="m-2">flex</h3>
+    <div class="flex bg-slate-300 mb-5">
+        <div class="bg-purple-400 p-5 m-5 ">Caja 1</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 2</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 3</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 4</div>
+    </div>
+
+    <h3 class="m-2">inline.flex</h3>
+     <div class="inline-flex bg-slate-300">
+        <div class="bg-purple-400 p-5 m-5 ">Caja 1</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 2</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 3</div>
+        <div class="bg-purple-400 p-5 m-5 ">Caja 4</div>
+    </div>
+
+    <h2 class="text-2xl font-extrabold mt-4 ml-2">Grow, Shrink, Flex</h2>
+    <h3 class="m-2">Grow (Crecer)</h3>
+    <div class="flex bg-slate-300 mb-5">
+        <div class="bg-purple-400 p-5 m-5 grow ">.grow</div>
+        <div class="bg-purple-400 p-5 m-5 grow">.grow</div>
+        <div class="bg-purple-400 p-5 m-5 grow-0">.grow-0 (no se va a agrandar)</div>
+    </div>
+     <h3 class="m-2">Shrink (Encoger)</h3>
+    <div class="flex bg-slate-300 mb-5">
+        <div class="bg-purple-400 p-5 m-5 w-80 shrink ">.shrink</div>
+        <div class="bg-purple-400 p-5 m-5 w-80 shrink">.shrink</div>
+        <div class="bg-purple-400 p-5 m-5 w-80 shrink-0">.shrink-0 (mantiene dimension)</div>
+    </div>
+     <h3 class="m-2">Flex-none y Flex-initial</h3>
+    <div class="flex bg-slate-300 mb-5">
+        <div class="bg-purple-400 p-5 m-5 w-80 flex-none ">.flex-none (mantiene dimension)</div>
+        <div class="bg-purple-400 p-5 m-5 w-80 felx-initial">.flex-initial</div>    
+    </div>
+
+    <h2 class="text-2xl font-extrabold mt-4 ml-2">Grap</h2>
+    <h3 class="m-2">Grap</h3>
+    <div class="flex flex-wrap justify-center items-center text-center bg-slate-300 mb-5">
+        <div class="bg-purple-400 p-5 m-5 w-80 ">Lorem ipsum dolor sit.</div>
+        <div class="bg-purple-400 p-5 m-5 w-80">Lorem ipsum dolor sit.</div>
+        <div class="bg-purple-400 p-5 m-5 w-80 ">Lorem ipsum dolor sit.</div>
+        <div class="bg-purple-400 p-5 m-5 w-80">Lorem ipsum dolor sit.</div>
+        <div class="bg-purple-400 p-5 m-5 w-80 ">Lorem ipsum dolor sit.</div>
+    </div>
+</section>
+
+<section>
+
 </section>
 
 </body>
