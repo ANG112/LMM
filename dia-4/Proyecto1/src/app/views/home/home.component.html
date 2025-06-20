@@ -1,0 +1,81 @@
+
+
+<div class="grid grid-cols-12 bg-slate-200">
+    <header class="col-span-12 flex bg-black/80 justify-around flex-wrap">
+        <h1 class="p-8 text-center text-white text-4xl md:text-5xl w-2/3 justify-end">Bienvenido</h1>
+        <div >
+            <button class="border rounded-xl cursor-pointer p-2 m-2 md:p-3 md:m-4 ring-1 text-sm md:text-base text-white bg-black/50 hover:bg-slate-400 hover:text-black">Login</button>
+            <button class="border rounded-xl cursor-pointer p-2 m-2 md:p-3 md:m-4 ring-1 text-sm md:text-base text-white bg-black/50 hover:bg-slate-400 hover:text-black">Contacto</button>
+        </div>
+
+    </header>
+    
+
+        <aside class="col-span-12 justify-center md:col-span-3 lg:col-span-2 2xl:col-span-1 flex md:flex-col  bg-black/80">
+            <nav class="flex md:flex-col gap-4 py-4 md:min-h-screen">
+                <a
+                routerLink="/home/client"
+                routerLinkActive="activebutton"
+                class="text-blue-400 font-bold text-xl ml-8 xl:ml-4"
+                >Clientes</a
+                >
+                <a
+                routerLink="/home/room"
+                routerLinkActive="activebutton"
+                class="text-blue-400 font-bold text-xl ml-8 xl:ml-4"
+                >Habitaciones</a
+                >
+                <a
+                routerLink="/home/admin"
+                routerLinkActive="activebutton"
+                class="text-blue-400 font-bold text-xl ml-8 xl:ml-4"
+                >Admin</a
+                >
+            </nav>
+        </aside>
+        <main class=" md:col-span-9 lg:col-span-10 2xl:col-span-11 md:flex-grow min-h-screen">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+
+
+<div class="grid grid-cols-[20%_1fr] grid-rows-[50px_1fr] h-screen overflow-hidden">
+
+  <header class="bg-[#252b36] flex justify-between col-span-full">
+    <h1 class="p-5 text-white text-3xl font-bold">Título de la Aplicación</h1> 
+    
+    <div class="flex justify-end items-center w-full pr-[35px] gap-3">
+      <span class="text-white">Bienvenido, Alfonso</span>
+      <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors">
+        Configuración
+      </button>
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">
+        Cerrar Sesión
+      </button>
+    </div>
+  </header>
+
+  <aside class="bg-[#252b36] border-t border-t-[#ffffff30] border-solid p-4">
+    <nav class="flex flex-col gap-4">
+      <a routerLink="/home/client" routerLinkActive="activebutton" 
+         class="text-blue-400 font-bold text-xl ml-4 hover:text-blue-200 transition-colors">Clientes</a>
+      <a routerLink="/home/room" routerLinkActive="activebutton" 
+         class="text-blue-400 font-bold text-xl ml-4 hover:text-blue-200 transition-colors">Habitaciones</a>
+      <a routerLink="/home/admin" routerLinkActive="activebutton" 
+         class="text-blue-400 font-bold text-xl ml-4 hover:text-blue-200 transition-colors">Admin</a>
+    </nav>
+  </aside>
+
+  <main class="bg-[#f4f5f7] p-[15px]">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>
+
+
+    
+
+
+
+
