@@ -1,3 +1,5 @@
+
+<div class="grid grid-cols-1 justify-self-center">
 <h2 class="text-3xl font-bold mb-6 text-gray-700">Contenido Principal</h2>
      
 
@@ -10,3 +12,10 @@
 </div>
 
 <app-hooks *ngIf="mostrar"></app-hooks>
+
+<h2 class="text-3xl font-bold text-gray-800 my-6">Nuestros Platos</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+  <app-product-card *ngFor="let plato of platos" [producto]="plato"></app-product-card>
+</div>
+</div>
