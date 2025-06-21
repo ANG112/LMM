@@ -1,2 +1,12 @@
 <h2 class="text-3xl font-bold mb-6 text-gray-700">Contenido Principal</h2>
-        
+     
+
+<h3>Ejemplo de interpolación simulando un compoenente</h3>
+<p>Prueba1 {{titulo}}</p>
+<p>Prueba2 {{listado}}</p>
+<div class="flex gap-2 p-4">
+<button (click)="mostrarHooks(false)" class="border rounded text-white bg-green-300 p-2" *ngIf="mostrar">Ocultar</button>
+<button (click)="mostrarHooks(true)" class="border rounded text-white bg-green-300 p-2" *ngIf="!mostrar">Mostrar</button>
+</div>
+
+<app-hooks *ngIf="mostrar"></app-hooks>

@@ -4,6 +4,7 @@ import { AsideDerechaComponent } from './views/aside-derecha/aside-derecha.compo
 import { AsideIzquierdaComponent } from './views/aside-izquierda/aside-izquierda.component';
 
 export const routes: Routes = [
+    {path: '', redirectTo:'/pagina-independiente', pathMatch:'full'},
     {path:'pagina-independiente', component: PaginaIndependienteComponent},
     {path: 'aside-izquierda', component:AsideIzquierdaComponent},
     {path: 'aside-derecha', component:AsideDerechaComponent}
