@@ -1,0 +1,19 @@
+
+<app-encabezado></app-encabezado>
+
+<div class="grid grid-cols-[1fr_2fr] md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_4fr] xl:grid-cols-[1fr_5fr] gap-4">
+
+  <aside class="col-start-1 col-end-2 p-4 bg-purple-950 border-r">
+    
+    <app-card *ngFor="let user of usuarios" [usuario]="user"></app-card>
+  </aside>
+
+  <main class="col-start-2 col-end-3 p-4">
+    <app-quiz></app-quiz>
+  </main>
+
+</div>
+
+<footer>
+  <p class="text-white text-center font-normal text-base p-10">&copy; 2025 Mi App</p>
+</footer>

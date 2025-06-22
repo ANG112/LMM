@@ -1,0 +1,44 @@
+
+<main class=" p-4 bg-slate-50 rounded-md max-w-[1200px] mx-auto mt-5"> <!--col-start-2 col-end-3-->
+    
+    @if (!quizTerminado()) {
+
+        <div>   
+            <h2 class="text-3xl text-white bg-slate-300 p-4 text-left mb-6 rounded-md ">{{ preguntaActual()?.pregunta }}</h2>
+            <div class="grid  mx-auto">
+                <button  (click)="responder(preguntaActual()!.respuesta1)" 
+                class="cursor-pointer mb-4 bg-slate-200 rounded-md shadow-xs">
+                <p class="text xl text-slate-900 p-4 text-left">{{ preguntaActual()?.respuesta1 }}</p></button>
+                <button  (click)="responder(preguntaActual()!.respuesta2)"
+                class="cursor-pointer mb-4 bg-slate-200 rounded-md shadow-xs">
+                <p class="text xl text-slate-900 p-4 text-left">{{ preguntaActual()?.respuesta2 }}</p></button>
+                <button  (click)="responder(preguntaActual()!.respuesta3)"
+                class="cursor-pointer mb-4 bg-slate-200 rounded-md shadow-xs">
+                <p class="text xl text-slate-900 p-4 text-left">{{ preguntaActual()?.respuesta3}}</p></button>
+                <button  (click)="responder(preguntaActual()!.respuesta4)"
+                class="cursor-pointer mb-4 bg-slate-200 rounded-md shadow-xs">
+                <p class="text xl text-slate-900 p-4 text-left">{{ preguntaActual()?.respuesta4}}</p></button>
+            </div>
+        @if (mensajeResultado()) {
+             <p class="mt-4 text-slate-900 text-xl">{{ mensajeResultado() }}</p>
+            <div class="flex items-end justify-end mt-4">
+                <button (click)="siguientePregunta()" class="cursor-pointer bg-slate-900 text-white p-3 rounded-xl mr-10">Siguiente</button>
+            </div>
+          } 
+        </div>
+          
+      }  @else {
+        <div class="text-center">
+            <h3 class="text-slate-900 text-4xl mb-4">¡Quiz Terminado!</h3>
+            <p class="text-slate-900 text-2xl">Tu puntuación final es: {{ puntuacion() }} / {{ preguntas.length }}</p>
+            <button (click)="reiniciarQuiz()" class="cursor-pointer bg-blue-600 text-white p-3 rounded-xl mt-6">Reiniciar Quiz</button>
+        </div>
+      }
+   
+</main>
+
+
+   
+    
+
+
