@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../data/product.interface';
 import { CardComponent } from '../../compo/card/card.component';
@@ -9,8 +9,12 @@ import { CardComponent } from '../../compo/card/card.component';
   templateUrl: './coctails.component.html',
   styleUrl: './coctails.component.scss'
 })
-export class CoctailsComponent {
+export class CoctailsComponent implements OnInit {
 coctails: Product[] = [];
+@Output() addProduct = new EventEmitter<Product>();
+
+  constructor() { }
+
 
   ngOnInit(): void {
     this.coctails = [
@@ -21,8 +25,11 @@ coctails: Product[] = [];
     ];
   }
 
-  handleAddToCarrito(productId: string): void {
-    console.log(`Cóctel ${productId} añadido al carrito`);
+   handleAddToCarrito(productId: string): void {
+    const productToAdd = this.coctails.find(c => c.id === productId);
+    if (productToAdd) {
+      this.addProduct.emit(productToAdd);
+    }
   }
 }
 

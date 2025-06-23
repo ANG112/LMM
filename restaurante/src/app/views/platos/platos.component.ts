@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CardComponent } from '../../compo/card/card.component';
 import { Product } from '../../data/product.interface';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PlatosComponent implements OnInit {
   platos: Product[] = [];
+  @Output() addProduct = new EventEmitter<Product>();
 
   ngOnInit(): void { 
     this.platos = [
@@ -23,8 +24,9 @@ export class PlatosComponent implements OnInit {
   }
 
   handleAddToCarrito(productId: string): void {
-    console.log(`Plato ${productId} añadido al carrito`);
+    const productToAdd = this.platos.find(p => p.id === productId);
+    if (productToAdd) {
+      this.addProduct.emit(productToAdd); // <--- Emitimos el producto completo
+    }
   }
 }
-
-
