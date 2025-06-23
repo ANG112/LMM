@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../compo/card/card.component';
 import { Product } from '../../data/product.interface';
 import { CommonModule } from '@angular/common';
-import { combineLatest } from 'rxjs';
+
 
 @Component({
   selector: 'app-platos',
@@ -15,8 +15,9 @@ export class PlatosComponent implements OnInit {
 
   ngOnInit(): void { 
     this.platos = [
-      { id: 'p1', img: 'assets/images/platos/paella.jpg', nombre: 'Paella', price: 15.50 },
-      { id: 'p2', img: 'assets/images/platos/tortilla.jpg', nombre: 'Tortilla Española', price: 8.00 },
+      { id: 'p1', img: 'img/platos/plato-1.jpg', nombre: 'Paella', price: 15.50 },
+      { id: 'p2', img: 'img/platos/plato-2.jpg', nombre: 'Tortilla Española', price: 8.00 },
+      { id: 'p3', img: 'img/platos/plato-3.jpg', nombre: 'Guiso Manchego', price: 8.00 },
       // ... más platos
     ];
   }

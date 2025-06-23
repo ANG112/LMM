@@ -1,10 +1,10 @@
-<p>card works!</p>
 
-<div class="">
-  <img [src]="product.img" [alt]="product.nombre" class="card-image">
 
-  <h3>{{ product.nombre }}</h3>
-  <div class="">
-    <span>Precio: ${{ product.price | number:'1.2-2' }}</span>
-    <button (click)="onButtonClick()">Añadir</button> </div>
+<div class="border rounded-xl shadow-xs ">
+  <img [src]="product.img" [alt]="product.nombre" class="w-100 h-100 object-cover justify-center items-center mx-auto">
+
+  <h3 class="text-base font-bold text-center text-xl">{{ product.nombre }}</h3>
+  <div class="flex flex-col">
+    <span class="text-center text-md font-bold">Precio: ${{ product.price | number:'1.2-2' }}</span>
+    <button (click)="onButtonClick()" class="bg-slate-800 text-white p-3 cursor-pointer rounded-xl">Añadir</button> </div>
 </div>
