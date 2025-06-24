@@ -1,0 +1,16 @@
+<nav class="bg-gray-800 p-4 shadow-md">
+  <div class="container mx-auto flex justify-center space-x-6">
+    <a routerLink="/agregar-item" routerLinkActive="bg-blue-600 text-white" 
+       class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
+      Agregar Ítem
+    </a>
+    <a routerLink="/ver-inventario" routerLinkActive="bg-blue-600 text-white" 
+       class="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
+      Ver Inventario
+    </a>
+  </div>
+</nav>
+
+<div class="container mx-auto p-4 md:p-6">
+  <router-outlet></router-outlet>
+</div>
