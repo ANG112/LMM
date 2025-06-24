@@ -16,6 +16,12 @@ export class CardComponent {
   onButtonClick(): void {
     this.buttonClick.emit(this.product.id);
   }
+
+  getImagen() : string {
+    const imagePath = `public/${this.product.img}`;
+    console.log(`Intentando cargar imagen: ${imagePath}`); // ¡Añadimos este console.log!
+    return imagePath;
+  }
 }
 
 

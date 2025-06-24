@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Product } from '../../data/product.interface';
 
@@ -9,19 +9,21 @@ import { Product } from '../../data/product.interface';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
-carrito: Product[] = [];
+export class HomeComponent implements OnInit {
+  carrito: Product[] = [];
 
   constructor() {
     // Opcional: Cargar carrito desde localStorage al iniciar
-    const storedCarrito = localStorage.getItem('carritoSimple');
+    const storedCarrito = localStorage.getItem('carritoHome');
     if (storedCarrito) {
       this.carrito = JSON.parse(storedCarrito);
     }
   }
 
-  // Método para añadir un producto al carrito
-  // Este método será llamado desde PlatosComponent y CoctailsComponent
+  ngOnInit(): void {
+    // Puedes poner alguna lógica de inicialización si es necesario
+  }
+
   addProductToCarrito(product: Product): void {
     const existingProduct = this.carrito.find(item => item.id === product.id);
 
@@ -34,24 +36,19 @@ carrito: Product[] = [];
     }
   }
 
-  // Método para eliminar un producto del carrito
-  // Este método será llamado desde CarritoComponent
   removeProductFromCarrito(productId: string): void {
     this.carrito = this.carrito.filter(item => item.id !== productId);
     this.saveCarrito();
     console.log(`Producto con ID ${productId} eliminado del carrito.`);
   }
 
-  // Método para vaciar el carrito
   clearCarrito(): void {
     this.carrito = [];
     this.saveCarrito();
     console.log('Carrito vaciado.');
   }
 
-  // Guardar en localStorage para persistencia simple
   private saveCarrito(): void {
-    localStorage.setItem('carritoSimple', JSON.stringify(this.carrito));
+    localStorage.setItem('carritoHome', JSON.stringify(this.carrito));
   }
-
 }
